@@ -1,11 +1,13 @@
+import './cityContainer.css'
+
 const CityContainer = ({ cityName, main, description, icon }) => {
     return (
-        <div>
-            <ul>
-                <li>{cityName}</li>
-                <li>{main}</li>
-                <li>{description}</li>
-                <li>{icon}</li>
+        <div className='container'>
+            <ul className='list'>
+                <li className='listComponents'>{cityName}</li>
+                <li className='listComponents'>{main}</li>
+                <li className='listComponents'>{description}</li>
+                <li className='listComponents'>{icon}</li>
             </ul>
         </div>
     )

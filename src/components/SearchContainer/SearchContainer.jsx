@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import TempContainer from "../TempContainer/TempContainer";
 import CityContainer from "../CityContainer/CityContainer";
+import './searchContainer.css';
 
 
 const SearchContainer = () => {
@@ -33,11 +34,11 @@ const SearchContainer = () => {
         axios.get('https://community-open-weather-map.p.rapidapi.com/find', config).then(response => {
             console.log(response.data.list[0]);
             setWeather('weather');
-            setTemp(response.data.list[0].main.temp);
-            setTempMax(response.data.list[0].main.temp_max);
-            setTempMin(response.data.list[0].main.temp_min);
+            setTemp((response.data.list[0].main.temp - 273.15).toFixed(1));
+            setTempMax((response.data.list[0].main.temp_max - 273.15).toFixed(1));
+            setTempMin((response.data.list[0].main.temp_min - 273.15).toFixed(1));
             setHumidity(response.data.list[0].main.humidity);
-            setFeelsLike(response.data.list[0].main.feels_like);
+            setFeelsLike((response.data.list[0].main.feels_like - 273.15).toFixed(1));
             setCityName(response.data.list[0].name);
             setMain(response.data.list[0].weather[0].main);
             setDescription(response.data.list[0].weather[0].description);
@@ -69,14 +70,13 @@ const SearchContainer = () => {
                         <TempContainer temp={temp} tempMax={tempMax} tempMin={tempMin} feelsLike={feelsLike} humidity={humidity} /> <CityContainer cityName={cityName} main={main} description={description} icon={icon} />
                     </>
                 ) : (
-                    <>
-                        <p>search bar</p>
-                        <form action="submit" onSubmit={handleSubmit}>
-                            <input type="text" placeholder="Type City Name" value={search} onChange={(e) => handleChange(e.target.value)} />
-                            <button type="submit">Search</button>
-                        </form>
-                        <p style={{ cursor: 'pointer' }} onClick={setWeather}>{search}</p>
-                    </>
+                        <div className="container">
+                            <h1 className="heading">Search Here</h1>
+                            <form action="submit" onSubmit={handleSubmit}>
+                                <input type="text" placeholder="Type City Name" value={search} onChange={(e) => handleChange(e.target.value)} className="input"/>
+                                <button type="submit" className="searchButton">Search</button>
+                            </form>
+                        </div>
                 )
             }
         </div>
