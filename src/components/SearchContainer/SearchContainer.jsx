@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import TempContainer from "../TempContainer/TempContainer";
-import CityContainer from "../CityContainer/CityContainer";
 import './searchContainer.css';
 
 
@@ -66,9 +65,9 @@ const SearchContainer = () => {
         <div>
             {
                 weather === 'weather' ? (
-                    <>
-                        <TempContainer temp={temp} tempMax={tempMax} tempMin={tempMin} feelsLike={feelsLike} humidity={humidity} /> <CityContainer cityName={cityName} main={main} description={description} icon={icon} />
-                    </>
+                    <div className="results">
+                        <TempContainer temp={temp} tempMax={tempMax} tempMin={tempMin} feelsLike={feelsLike} humidity={humidity} cityName={cityName} main={main} description={description} icon={icon} />
+                    </div>
                 ) : (
                         <div className="container">
                             <h1 className="heading">Search Here</h1>
