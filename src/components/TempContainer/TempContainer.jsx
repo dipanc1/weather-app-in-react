@@ -1,12 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 
-const TempContainer = () => {
-    const [temp, setTemp] = useState('');
-    const [tempMax, setTempMax] = useState('');
-    const [tempMin, setTempMin] = useState('');
-    const [humidity, setHumidity] = useState('');
-    const [feelsLike, setFeelsLike] = useState('');
+const TempContainer = ( { temp, tempMax, tempMin, humidity, feelsLike }) => {
 
     return (
         <div className="tempContainer">
