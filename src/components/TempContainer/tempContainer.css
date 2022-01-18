@@ -41,3 +41,25 @@
     font-family: 'Rubik', sans-serif;
     text-shadow: 1px 1px black;
 }
+
+@media screen and (max-width: 600px) {
+    .tempContainer {
+        width: 60vw;
+        height: 70vh;
+    }
+    .topMost {
+        flex-direction: column;
+    }
+    .items {
+        font-size: medium;
+    }
+    .middle {
+        flex-direction: row;
+        margin-top: 40px;
+        justify-content: space-between;
+    }
+    .items2 {
+        font-size: small;
+        margin-right: 35px;
+    }
+}

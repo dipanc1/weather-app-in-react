@@ -58,3 +58,10 @@
     outline: none;
     cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+    .results {
+        margin-left: 28px;
+        flex-direction: column;
+    }
+}

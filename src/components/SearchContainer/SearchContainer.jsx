@@ -78,7 +78,7 @@ const SearchContainer = () => {
                     <div className="container">
                         <h1 className="heading">Search Here</h1>
                         <form action="submit" onSubmit={handleSubmit}>
-                            <input type="text" placeholder="Type City Name-Lon, UK or London, GB" value={search} onChange={(e) => handleChange(e.target.value)} className="input" />
+                            <input type="text" placeholder="Type Like - Lon, UK or London, GB" value={search} onChange={(e) => handleChange(e.target.value)} className="input" />
                             <button type="submit" className="searchButton">Search</button>
                         </form>
                     </div>
