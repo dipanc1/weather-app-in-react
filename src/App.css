@@ -1,9 +1,26 @@
+.App {
+    background-image: url("/public/bg.jpg");
+    height: 96vh;
+}
+
 .title {
-    font-size: 40px;
-    color: #59b256;
     font-weight: bold;
-    text-align: center;
     margin-top: 20px;
-    font-family: 'Roboto', sans-serif;
-    border: outset;
+    font-family: "Rubik", sans-serif;
+    font-size: 80px;
+    color: #fff;
+    font-style: oblique;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #59b256, 0 0 40px #59b256, 0 0 50px #59b256, 0 0 60px #59b256, 0 0 70px #59b256;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #0cee04, 0 0 40px #0cee04, 0 0 50px #0cee04, 0 0 60px #0cee04, 0 0 70px #0cee04, 0 0 80px #0cee04;
+    }
 }

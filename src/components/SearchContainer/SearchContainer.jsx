@@ -13,8 +13,7 @@ const SearchContainer = () => {
     const [humidity, setHumidity] = useState('');
     const [feelsLike, setFeelsLike] = useState('');
     const [cityName, setCityName] = useState('');
-    const [main, setMain] = useState('');
-    const [description, setDescription] = useState('');
+    const [id, setId] = useState('');
     const [icon, setIcon] = useState('');
 
     const GetWeather = ({ search }) => {
@@ -39,8 +38,7 @@ const SearchContainer = () => {
             setHumidity(response.data.list[0].main.humidity);
             setFeelsLike((response.data.list[0].main.feels_like - 273.15).toFixed(1));
             setCityName(response.data.list[0].name);
-            setMain(response.data.list[0].weather[0].main);
-            setDescription(response.data.list[0].weather[0].description);
+            setId(response.data.list[0].weather[0].id);
             setIcon(response.data.list[0].weather[0].icon);
 
         })
@@ -61,21 +59,29 @@ const SearchContainer = () => {
         GetWeather({ search });
     }
 
+    const handleBack = () => {
+        setSearch('');
+        setWeather('noWeather');
+    }
+
     return (
         <div>
             {
                 weather === 'weather' ? (
                     <div className="results">
-                        <TempContainer temp={temp} tempMax={tempMax} tempMin={tempMin} feelsLike={feelsLike} humidity={humidity} cityName={cityName} main={main} description={description} icon={icon} />
+                        <button className="backButton" onClick={handleBack}>
+                            Back
+                        </button>
+                        <TempContainer temp={temp} tempMax={tempMax} tempMin={tempMin} feelsLike={feelsLike} humidity={humidity} cityName={cityName} id={id} icon={icon} />
                     </div>
                 ) : (
-                        <div className="container">
-                            <h1 className="heading">Search Here</h1>
-                            <form action="submit" onSubmit={handleSubmit}>
-                                <input type="text" placeholder="Type City Name" value={search} onChange={(e) => handleChange(e.target.value)} className="input"/>
-                                <button type="submit" className="searchButton">Search</button>
-                            </form>
-                        </div>
+                    <div className="container">
+                        <h1 className="heading">Search Here</h1>
+                        <form action="submit" onSubmit={handleSubmit}>
+                            <input type="text" placeholder="Type City Name" value={search} onChange={(e) => handleChange(e.target.value)} className="input" />
+                            <button type="submit" className="searchButton">Search</button>
+                        </form>
+                    </div>
                 )
             }
         </div>

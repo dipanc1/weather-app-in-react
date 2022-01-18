@@ -1,5 +1,5 @@
-import SearchContainer from "./components/SearchContainer/SearchContainer";
 import './App.css';
+import SearchContainer from "./components/SearchContainer/SearchContainer";
 
 function App() {
   return (
