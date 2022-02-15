@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import './tempContainer.css';
+import './TempStyles.css';
 
 const TempContainer = ({ temp, tempMax, tempMin, humidity, feelsLike, cityName, id, icon }) => {
 

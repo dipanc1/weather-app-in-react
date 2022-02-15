@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import TempContainer from "../TempContainer/TempContainer";
-import './searchContainer.css';
+import './SearchStyles.css';
 
 
 const SearchContainer = () => {
