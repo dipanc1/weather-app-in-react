@@ -10,7 +10,7 @@ export const forecastWeather = async (city, days) => {
             lang: 'en'
         },
         headers: {
-            'X-RapidAPI-Key': 'f5962936d7msh78d3661e49607d2p1714f6jsnf0bb042b4319',
+            'X-RapidAPI-Key': '',
             'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
         }
     };
