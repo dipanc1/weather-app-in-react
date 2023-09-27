@@ -1,18 +1,19 @@
 
 ## Demo
 
-
+![](gif.gif)
 
 https://marleen-weather.netlify.app/
 
 
-## Installation
+## Usage
 
-Install weather-app-in-react with npm
+Download repo or clone repo
 
 ```bash
-  npm install weather-app-in-react
   cd weather-app-in-react
+  npm install 
+  npm start
 ```
     
 ## API Reference
@@ -29,4 +30,3 @@ https://rapidapi.com/community/api/open-weather-map
 ## Authors
 
 - [@dipanc1](https://github.com/dipanc1)
-
