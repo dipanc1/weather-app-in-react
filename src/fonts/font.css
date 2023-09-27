@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'DipanFontMedium';
+    src: local('DipanFontMedium'),
+        url('./Mona-Sans-Medium.woff') format('woff'),
+        url('./Mona-Sans-Medium.woff2') format('woff2'),
+}
+
+@font-face {
+    font-family: 'DipanFontRegular';
+    src: local('DipanFontRegular'),
+        url('./Mona-Sans-Regular.woff') format('woff'),
+        url('./Mona-Sans-Regular.woff2') format('woff2'),
+}

@@ -1,11 +1,14 @@
-import './App.css';
-import SearchContainer from "./components/SearchContainer/SearchContainer";
+import React from 'react';
+import './App.scss';
+import LeftContainer from './components/LeftContainer/LeftContainer';
+import RightContainer from './components/RightContainer/RightContainer';
 
 function App() {
+
   return (
     <div className="App">
-      <h1 className="title">Marleen's Weather App</h1>
-      <SearchContainer />
+      <LeftContainer />
+      <RightContainer />
     </div>
   );
 }

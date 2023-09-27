@@ -1,0 +1,120 @@
+.right-container {
+  display: flex;
+  flex: 1;
+  background-color: #f6f6f6;
+  height: 80vh;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  margin: 0 50px 0 0;
+  flex-direction: column;
+
+  .right-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    p {
+      font-size: 30px;
+      font-weight: 600;
+      color: #131313;
+      margin: 0;
+    }
+  }
+
+  .right-middle {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .right-middle-top {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      width: 60%;
+      .right-middle-top-left {
+        display: flex;
+        flex-direction: row;
+        .temperature {
+          display: flex;
+          flex-direction: row;
+          color: #696969;
+          font-size: 60px;
+          margin: 0;
+          position: relative;
+          p {
+            position: absolute;
+            top: -75px;
+            right: -30px;
+          }
+        }
+      }
+      .right-middle-top-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 40px;
+        width: 70%;
+        span {
+          display: flex;
+          flex-direction: row;
+          width: 60%;
+          justify-content: space-around;
+          align-items: flex-end;
+          p {
+            font-size: 15px;
+            font-weight: 600;
+            color: #131313;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .right-middle-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+      .temperature {
+        display: flex;
+        flex-direction: row;
+        color: #696969;
+        font-size: 15px;
+        margin: 0;
+        position: relative;
+        p {
+          position: absolute;
+          top: -20px;
+          right: -10px;
+        }
+      }
+      .weather {
+        color: #696969;
+        font-size: 30px;
+        margin: 10px;
+      }
+    }
+  }
+
+  .right-bottom {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-size: 20px;
+      margin: 0;
+    }
+    .box-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+}
