@@ -26,7 +26,7 @@ Download repo or clone repo
 
 ### Link to get API key
 
-https://rapidapi.com/community/api/open-weather-map
+https://rapidapi.com/weatherapi/api/weatherapi-com
 ## Authors
 
 - [@dipanc1](https://github.com/dipanc1)
