@@ -17,10 +17,12 @@ export const AppContextProvider = ({ children }) => {
 
     const getWeather = async (searchQuery, days) => {
         const data = await forecastWeather(searchQuery, days);
-        dispatch({
-            type: 'RESULTS',
-            payload: data
-        })
+        if (data !== undefined) {
+            dispatch({
+                type: 'RESULTS',
+                payload: data
+            })
+        } 
     }
 
     return (

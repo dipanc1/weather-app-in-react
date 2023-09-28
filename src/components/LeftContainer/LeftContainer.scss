@@ -10,6 +10,11 @@
   justify-content: center;
   align-items: center;
 
+  @media (max-width: 768px) {
+    border-radius: 50px;
+    margin: 0 20px;
+  }
+
   .left-top {
     display: flex;
     flex: 1;
@@ -31,6 +36,16 @@
       font-size: 20px;
       font-weight: 600;
       color: #696969;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+      p {
+        font-size: 16px;
+        padding: 20px;
+      }
+      input {
+        width: 50%;
+      }
     }
   }
 
@@ -96,6 +111,14 @@
         justify-content: space-around;
         width: 125px;
         height: 3rem;
+      }
+
+      @media (max-width: 768px) {
+        top: 32rem;
+        right: 2rem;
+        .left-middle-top {
+          width: 120px;
+        }
       }
     }
   }

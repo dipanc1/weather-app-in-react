@@ -9,16 +9,10 @@ import { AppContext } from '../../context/AppContext'
 function RightContainer() {
   const { results } = React.useContext(AppContext)
 
-  // results.forecast.forecastday[0].hour.forEach((item) => {
-  //   if (parseInt(item.time.split(" ")[1].split(":")[0]) > new Date().getHours()) {
-  //     console.log(item)
-  //   }
-  // })
-
   return (
-    Object.keys(results).length !== 0 && <div className='right-container' >
+    (Object.keys(results).length !== 0 || results === undefined) && <div className='right-container' >
       <div className="right-top">
-        <p>{results.location.localtime.split(" ")[1] > 12 ? 'Good Morning' : results.location.localtime.split(" ")[1] > 18 ? 'Good Afternoon' : 'Good Evening'}</p>
+        <p>{parseInt(results.location.localtime.split(" ")[1].split(":")[0]) < 12 ? 'Good Morning' : parseInt(results.location.localtime.split(" ")[1].split(":")[0]) < 18 ? 'Good Afternoon' : 'Good Evening'}</p>
         <p>{results.location.localtime.split(" ")[1]}</p>
       </div>
 

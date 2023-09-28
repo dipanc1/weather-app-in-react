@@ -16,7 +16,7 @@ function LeftContainer() {
   }, [getWeather, results])
 
   return (
-    Object.keys(results).length !== 0 && <div className='left-container'>
+    (Object.keys(results).length !== 0 || results === undefined) && <div className='left-container'>
       <div className="left-top">
         {searchOn ? <input onBlur={
           () => dispatch({ type: 'SEARCH_ON' })
