@@ -21,7 +21,7 @@ Download repo or clone repo
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `REACT_APP_API_KEY` | `string` | **Required**. API key from OpenWeather API |
+| `REACT_APP_API_KEY` | `string` | **Required**. API key from Weather API |
 
 
 ### Link to get API key
