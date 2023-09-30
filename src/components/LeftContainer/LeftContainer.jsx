@@ -44,15 +44,11 @@ function LeftContainer() {
         </div>
         <div className="left-middle-right">
           <span className="left-middle-top">
-            <img src={wind} alt="wind" width={'30px'} style={{
-              filter: 'invert(0.4)'
-            }} />
+            <img src={wind} alt="wind" />
             <p>{results.current.wind_mph} mph</p>
           </span>
           <span className="left-middle-bottom">
-            <img src={drop} alt="drop" width={'30px'} style={{
-              filter: 'invert(0.4)'
-            }} />
+            <img src={drop} alt="drop" />
             <p>{results.current.humidity} %</p>
           </span>
         </div>

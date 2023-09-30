@@ -40,7 +40,7 @@
     @media (max-width: 768px) {
       width: 100%;
       p {
-        font-size: 16px;
+        font-size: 15px;
         padding: 20px;
       }
       input {
@@ -103,6 +103,10 @@
         justify-content: space-around;
         width: 125px;
         height: 3rem;
+        img {
+          width: 30px;
+          filter: invert(0.4);
+        }
       }
       .left-middle-bottom {
         display: flex;
@@ -111,13 +115,31 @@
         justify-content: space-around;
         width: 125px;
         height: 3rem;
+        img {
+          filter: invert(0.4);
+          width: 30px;
+        }
       }
 
       @media (max-width: 768px) {
-        top: 32rem;
+        top: 25rem;
         right: 2rem;
+        p {
+          font-size: 10px;
+        }
         .left-middle-top {
-          width: 120px;
+          width: 5rem;
+          height: 2rem;
+          img{
+            width: 20px;
+          }
+        }
+        .left-middle-bottom {
+          width: 5rem;
+          height: 2rem;
+          img{
+            width: 20px;
+          }
         }
       }
     }
