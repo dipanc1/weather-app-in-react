@@ -7,6 +7,7 @@ function App() {
 
   return (
     <div className="App">
+      <p className="Mtitle">Welcome to Marleen's Weather App</p>
       <LeftContainer />
       <RightContainer />
     </div>

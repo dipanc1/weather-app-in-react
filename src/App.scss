@@ -1,4 +1,4 @@
-@import './fonts/font.css';
+@import "./fonts/font.css";
 
 * {
   font-family: DipanFontMedium;
@@ -18,4 +18,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  .Mtitle {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 1rem;
+    position: absolute;
+    top: 0;
+    @media (max-width: 768px) {
+      font-size: 1.3rem;
+    }
+  }
 }
