@@ -5,7 +5,7 @@ import { forecastWeather } from '../api/api';
 
 const INITIAL_STATE = {
     searchOn: false,
-    searchQuery: 'Tapa',
+    searchQuery: 'Cologne',
     results: {}
 }
 

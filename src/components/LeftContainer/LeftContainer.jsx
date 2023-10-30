@@ -11,7 +11,7 @@ function LeftContainer() {
 
   useEffect(() => {
     if (Object.keys(results).length === 0) {
-      getWeather('London', days)
+      getWeather(searchQuery, days)
     }
   }, [getWeather, results])
 
